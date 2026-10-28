@@ -18,9 +18,9 @@
 
 [Quickstart](#quickstart) · [How it works](#how-it-works) · [Pattern categories](#pattern-categories) · [Examples](#examples) · [Install](#install) · [FAQ](#faq)
 
-[Русская версия](README.ru.md)
-
 </div>
+
+English · [Русский](README.ru.md) · [简体中文](README.zh-CN.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
 deslop-ru removes AI slop from Russian text as a skill for Claude Code, Cursor and Codex, plus a dependency-free Python checker that flags 119 patterns (85 Russian, 34 English) in 10 categories and 7 structure checks, with line numbers and a score. It is for editors, SMM managers, Telegram channel authors, students and developers who write Russian docs and want a draft checked, or rewritten in their own voice, before it goes out.
 

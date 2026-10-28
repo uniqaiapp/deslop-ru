@@ -89,7 +89,8 @@ class TestAdapters(unittest.TestCase):
         self.assertIn("SKILL.md", read("codex/INSTRUCTIONS.md"))
 
     def test_required_files_exist(self):
-        for rel in ("README.md", "README.ru.md", "LICENSE", "CONTRIBUTING.md", "CHANGELOG.md",
+        for rel in ("README.md", "README.ru.md", "README.zh-CN.md", "README.es.md", "README.pt-BR.md",
+                    "README.ja.md", "README.ko.md", "LICENSE", "CONTRIBUTING.md", "CHANGELOG.md",
                     "CODE_OF_CONDUCT.md", "SECURITY.md", ".gitignore", ".gitattributes", ".editorconfig",
                     ".github/workflows/ci.yml", ".github/ISSUE_TEMPLATE/bug_report.md",
                     ".github/ISSUE_TEMPLATE/feature_request.md", ".github/ISSUE_TEMPLATE/config.yml",
@@ -144,9 +145,14 @@ class TestForbiddenStrings(unittest.TestCase):
                 pass
 
 
+READMES = (("README.md", "readme"), ("README.ru.md", "readme-ru"), ("README.zh-CN.md", "readme-zh-cn"),
+           ("README.es.md", "readme-es"), ("README.pt-BR.md", "readme-pt-br"), ("README.ja.md", "readme-ja"),
+           ("README.ko.md", "readme-ko"))
+
+
 class TestReadmeLinks(unittest.TestCase):
     def test_utm_on_every_uniqai_link(self):
-        for rel, medium in (("README.md", "readme"), ("README.ru.md", "readme-ru")):
+        for rel, medium in READMES:
             t = read(rel)
             links = re.findall(r"https://uniqai\.app[^\s\")<>]*", t)
             self.assertTrue(links, rel)
@@ -158,7 +164,7 @@ class TestReadmeLinks(unittest.TestCase):
             self.assertEqual(t.count("Made by"), 1, rel)
 
     def test_readme_relative_links_resolve(self):
-        t = read("README.md") + read("README.ru.md")
+        t = "".join(read(rel) for rel, _ in READMES)
         for target in set(re.findall(r"\]\(((?!https?://|#|mailto:)[^)\s]+)\)", t)):
             self.assertTrue(os.path.exists(os.path.join(ROOT, target.split("#")[0])), target)
         for src in set(re.findall(r'src="((?!https?://)[^"]+)"', t)):

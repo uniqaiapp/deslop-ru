@@ -65,18 +65,23 @@ class TestExamplesReproduce(unittest.TestCase):
         self.assertEqual(deslop.patterns_markdown(), read("references/patterns.md"))
 
 
+# README file -> how that language phrases "N structure checks" (the number must precede it on the same line)
+STRUCTURE_PHRASE = {"README.md": "structure checks", "README.ru.md": "проверок формы", "README.zh-CN.md": "结构检查",
+                    "README.es.md": "comprobaciones de estructura", "README.pt-BR.md": "verificações de estrutura",
+                    "README.ja.md": "構成チェック", "README.ko.md": "구조 검사"}
+
+
 class TestReadmeNumbers(unittest.TestCase):
     def test_pattern_counts_in_readmes(self):
         s = deslop.stats()
-        for rel in ("README.md", "README.ru.md", "SKILL.md"):
+        for rel in list(STRUCTURE_PHRASE) + ["SKILL.md"]:
             t = read(rel)
             self.assertIn(str(s["patterns"]), t, rel)
             self.assertIn(str(s["by_lang"]["ru"]), t, rel)
             self.assertIn(str(s["by_lang"]["en"]), t, rel)
-        for rel in ("README.md", "README.ru.md"):
+        for rel, phrase in STRUCTURE_PHRASE.items():
             t = read(rel)
-            self.assertRegex(t, r"\b%d\b[^\n]*structure checks|\b%d\b[^\n]*проверок формы" % (
-                s["structure_checks"], s["structure_checks"]), rel)
+            self.assertRegex(t, r"(?<!\d)%d(?!\d)[^\n]*%s" % (s["structure_checks"], phrase), rel)
             self.assertIn(str(s["safe_cuts"]), t, rel)
 
     def test_readme_scores_match_reports(self):
@@ -88,7 +93,7 @@ class TestReadmeNumbers(unittest.TestCase):
             if m:
                 scores[m.group(1)] = int(m.group(2))
         checked = 0
-        for rel in ("README.md", "README.ru.md", "examples/README.md"):
+        for rel in list(STRUCTURE_PHRASE) + ["examples/README.md"]:
             for line in read(rel).split("\n"):
                 m = re.search(r"`(?:examples/)?([a-z-]+)(?:\.before\.md)?`[^\n]*?\|\s*(\d+)/100\s*\|\s*(\d+)/100", line)
                 if not m:
