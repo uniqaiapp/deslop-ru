@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-  <img alt="deslop-ru by UniqAI" src="assets/banner.svg" width="1280" height="320">
+  <img alt="deslop-ru: Remove AI slop from Russian text" src="assets/banner.svg" width="1280" height="320">
 </picture>
 
 <h1>deslop-ru: remove AI slop from Russian text</h1>
@@ -259,6 +259,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the local checks (`python3 tests/run.
 
 <div align="center">
 
-<sub>Made by <a href="https://uniqai.app/?utm_source=github&utm_medium=readme&utm_campaign=deslop-ru">UniqAI</a> — Kling 3.0, Veo 3, Flux, Nano Banana and GPT-5/Claude/Gemini/Grok in one app. We run this checker on our own Russian pages before they ship.</sub>
+<sub>Made by <a href="https://uniqai.app/?utm_source=github&utm_medium=readme&utm_campaign=deslop-ru">UniqAI</a>, an AI photo, video and chat app. The Russian pages on uniqai.app are written with the same rules.</sub>
 
 </div>
