@@ -1,0 +1,29 @@
+{
+  "name": "deslop-ru",
+  "description": "Russian AI-slop remover: detects and rewrites ChatGPT/Claude/Gemini patterns in Russian text (канцелярит, «в современном мире», лишние вводные, списки-простыни). Claude Code skill + Cursor/Codex rules + stdlib Python checker. Удаляет ИИ-штампы из русского текста. By UniqAI.",
+  "homepage": "https://uniqai.app/chat?utm_source=github&utm_medium=readme&utm_campaign=deslop-ru",
+  "topics": [
+    "ai-slop",
+    "no-ai-slop",
+    "russian",
+    "russian-language",
+    "ai-writing",
+    "text-cleanup",
+    "claude-code",
+    "claude-skills",
+    "agent-skills",
+    "cursor-rules",
+    "agents-md",
+    "prompt-engineering",
+    "llm",
+    "uniqai"
+  ],
+  "social_preview": "assets/social-preview.png",
+  "settings": {
+    "has_issues": true,
+    "has_discussions": true,
+    "has_wiki": false,
+    "has_projects": false,
+    "default_branch": "main"
+  }
+}

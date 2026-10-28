@@ -1,0 +1,15 @@
+{
+  "name": "deslop-ru",
+  "version": "0.1.0",
+  "description": "Remove AI-writing patterns (ИИ-штампы) from Russian text, with an English mode: a rewriting skill plus a zero-dependency checker that flags patterns with line numbers and a score.",
+  "author": {
+    "name": "UniqAI",
+    "email": "support@uniqai.app",
+    "url": "https://uniqai.app/?utm_source=github&utm_medium=plugin&utm_campaign=deslop-ru"
+  },
+  "homepage": "https://github.com/uniqaiapp/deslop-ru",
+  "repository": "https://github.com/uniqaiapp/deslop-ru",
+  "license": "MIT",
+  "keywords": ["claude-code", "skill", "russian", "ai-slop", "text-cleanup", "copywriting"],
+  "skills": ["./"]
+}

@@ -1,0 +1,40 @@
+AUDIT examples/newsletter.before.md
+===================================
+words: 135   lang: en   score: 100/100 (reads like a bot)
+weighted hits: 57 (density 42.22 per 100 words)
+
+By category
+  intro      Empty openers              2  ##
+  filler     Empty connectives          2  ##
+  bureau     Bureaucratic register      1  #
+  calque     English calques            8  ########
+  hype       Hype adjectives            7  #######
+  triplet    Triplets                   1  #
+  outro      Empty conclusions          2  ##
+  chat       Chat residue               1  #
+  structure  Structure                  2  ##
+
+Most frequent
+   3 x robust / powerful
+   2 x cutting-edge
+   2 x game-changer
+   2 x seamless
+   1 x a testament to
+   1 x elevate / empower
+   1 x emoji as structure
+   1 x feel free to
+
+Form
+  emoji                  3 (2.2 per 100w)
+  dashes                 1 (0.7 per 100w)
+  exclamations           2
+  bold labels            0
+  longest list           3
+  paragraph spread       0.19
+
+Do this first
+  1. in today's fast-paced world (line 1): Delete. Start with the fact.
+  2. game-changer (line 1): Say what changed and by how much.
+  3. it's important to note that (line 3): Delete the frame, keep the note.
+  4. it's not just X, it's Y (line 3): Keep Y; drop the imaginary X.
+  5. let's dive in (line 3): Delete the invitation and start.

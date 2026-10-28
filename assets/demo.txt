@@ -1,0 +1,14 @@
+$ python3 scripts/deslop.py check --no-fix examples/telegram-post.{before,after}.md
+> examples/telegram-post.before.md: 114 слов, язык ru
+! стр. 1   [intro] В современном мире, где всё меняется с неверо...  <- в современном мире
+! стр. 1   [calque] это не просто напиток, а  <- это не просто X, это Y
+! стр. 3   [intro] Давайте разберёмся, почему наша новая обжарка...  <- давайте разберёмся
+! стр. 10  [calque] на новый уровень  <- на новый уровень (next level)
+! стр. 12  [outro] Подводя итог,  <- подводя итог
+! текст    [structure] эмодзи вместо структуры
+# 12 more hits, full list in examples/reports/telegram-post.check.txt
+> оценка: {y:100/100} (читается как бот); hype 5, calque 4, outro 3, intro 2, filler 2, structure 2
+
+> examples/telegram-post.after.md: 79 слов, язык ru
++ штампов не найдено
++ оценка: 0/100 (чисто)

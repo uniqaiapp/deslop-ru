@@ -1,0 +1,7 @@
+---
+description: Remove AI-writing patterns (ИИ-штампы) from Russian or English text, rewriting in the author's voice; use when the user asks to clean, humanize or audit a draft that sounds generated, or says убрать ИИ-штампы / очеловечить текст.
+globs:
+alwaysApply: false
+---
+
+@SKILL.md

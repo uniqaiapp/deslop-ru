@@ -1,0 +1,12 @@
+examples/blog-intro.before.md        100/100  читается как бот
+examples/blog-intro.after.md           0/100  чисто
+examples/chat-answer.before.md       100/100  читается как бот
+examples/chat-answer.after.md          0/100  чисто
+examples/newsletter.before.md        100/100  reads like a bot
+examples/newsletter.after.md           0/100  clean
+examples/product-card.before.md      100/100  читается как бот
+examples/product-card.after.md         0/100  чисто
+examples/release-notes.before.md      39/100  заметно
+examples/release-notes.after.md        0/100  чисто
+examples/telegram-post.before.md     100/100  читается как бот
+examples/telegram-post.after.md        0/100  чисто

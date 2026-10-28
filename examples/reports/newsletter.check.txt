@@ -1,0 +1,28 @@
+examples/newsletter.before.md: 135 words, lang en
+  line 1   [intro] In today's fast-paced digital landscape,  <- in today's fast-paced world
+  line 1   [calque] game-changer
+  line 3   [filler] It's important to note that  <- it's important to note that
+  line 3   [calque] not just an update, it's  <- it's not just X, it's Y
+  line 3   [intro] Let's dive in!  <- let's dive in
+  line 5   [calque] Seamless  <- seamless
+  line 5   [calque] effortlessly  <- seamless
+  line 6   [hype] Robust  <- robust / powerful
+  line 6   [bureau] leverage  <- utilize / leverage
+  line 6   [hype] cutting-edge
+  line 7   [hype] Powerful  <- robust / powerful
+  line 7   [calque] unlock the full potential
+  line 9   [hype] Whether you're a startup founder or an enterp...  <- whether you're X or Y,
+  line 9   [hype] elevate  <- elevate / empower
+  line 9   [calque] next level  <- game-changer
+  line 9   [filler] Moreover,  <- moreover,
+  line 9   [hype] comprehensive  <- robust / powerful
+  line 9   [triplet] comprehensive, intuitive, and innovative  <- three adjectives in a row
+  line 9   [hype] innovative  <- cutting-edge
+  line 9   [calque] navigating the complexities  <- navigate the landscape
+  line 11  [outro] In conclusion,  <- in conclusion,
+  line 11  [calque] testament to  <- a testament to
+  line 11  [chat] Feel free to  <- feel free to
+  line 11  [outro] Remember,  <- remember that
+  text     [structure] emoji as structure
+  text     [structure] paragraphs of identical length
+  score: 100/100 (reads like a bot); calque 8, hype 7, intro 2, filler 2, outro 2, structure 2, bureau 1, triplet 1, chat 1

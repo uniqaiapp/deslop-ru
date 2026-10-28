@@ -1,0 +1,5 @@
+examples/release-notes.before.md: 123 слов, язык ru
+  стр. 3   [filler] Важно отметить, что  <- важно отметить
+  стр. 5   [calque] бесшовную  <- бесшовный (seamless)
+  стр. 7   [bureau] функционал
+  оценка: 39/100 (заметно); filler 1, calque 1, bureau 1
