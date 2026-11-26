@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Установка deslop-ru для Claude, Cursor, Codex | deslop-ru</title>
+<meta name="description" content="Как поставить deslop-ru в Claude Code, Cursor и Codex и как запускать чекер из командной строки и CI. Нужен только Python 3.9 и новее.">
+<link rel="canonical" href="https://uniqaiapp.github.io/deslop-ru/how-to/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UniqAI open source">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Установка deslop-ru для Claude, Cursor, Codex | deslop-ru">
+<meta property="og:description" content="Как поставить deslop-ru в Claude Code, Cursor и Codex и как запускать чекер из командной строки и CI. Нужен только Python 3.9 и новее.">
+<meta property="og:url" content="https://uniqaiapp.github.io/deslop-ru/how-to/">
+<meta property="og:image" content="https://uniqaiapp.github.io/deslop-ru/assets/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="deslop-ru: проверка русского текста на ИИ-штампы, до и после">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Установка deslop-ru для Claude, Cursor, Codex | deslop-ru">
+<meta name="twitter:description" content="Как поставить deslop-ru в Claude Code, Cursor и Codex и как запускать чекер из командной строки и CI. Нужен только Python 3.9 и новее.">
+<meta name="twitter:image" content="https://uniqaiapp.github.io/deslop-ru/assets/social-preview.png">
+<meta name="theme-color" content="#0b1113">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../site.css">
+<link rel="alternate" type="text/plain" href="https://uniqaiapp.github.io/deslop-ru/llms.txt" title="llms.txt">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://uniqai.app/#org","name":"UniqAI","url":"https://uniqai.app/","logo":{"@type":"ImageObject","url":"https://uniqai.app/icon-512.png","width":512,"height":512},"sameAs":["https://github.com/uniqaiapp"]},{"@type":"WebSite","@id":"https://uniqaiapp.github.io/#site","name":"Открытые инструменты UniqAI","url":"https://uniqaiapp.github.io/"},{"@type":"WebPage","@id":"https://uniqaiapp.github.io/deslop-ru/how-to/#page","url":"https://uniqaiapp.github.io/deslop-ru/how-to/","name":"Установка deslop-ru для Claude, Cursor, Codex | deslop-ru","description":"Как поставить deslop-ru в Claude Code, Cursor и Codex и как запускать чекер из командной строки и CI. Нужен только Python 3.9 и новее.","inLanguage":"ru","isPartOf":{"@id":"https://uniqaiapp.github.io/#site"},"publisher":{"@id":"https://uniqai.app/#org"},"dateModified":"2026-11-26","author":{"@type":"Person","name":"Vlad Yasinski","url":"https://www.roimobi.com/","sameAs":["https://www.roimobi.com","https://www.linkedin.com/in/vlad-yasinski-ua5er/","https://github.com/ua5er"]},"primaryImageOfPage":{"@type":"ImageObject","url":"https://uniqaiapp.github.io/deslop-ru/assets/social-preview.png"},"breadcrumb":{"@id":"https://uniqaiapp.github.io/deslop-ru/how-to/#crumbs"}},{"@type":"BreadcrumbList","@id":"https://uniqaiapp.github.io/deslop-ru/how-to/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Проверка","item":"https://uniqaiapp.github.io/deslop-ru/"},{"@type":"ListItem","position":2,"name":"Установка","item":"https://uniqaiapp.github.io/deslop-ru/how-to/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+<header class="top"><div class="wrap top-in">
+<a class="brand" href="https://uniqaiapp.github.io/" aria-label="Открытые инструменты UniqAI"><img src="../assets/wordmark.svg" alt="UniqAI" width="96" height="28"><span>open source</span></a>
+<nav class="nav" aria-label="Разделы"><a href="../">Проверка</a><a href="../examples/">Примеры</a><a href="../patterns/">Шаблоны</a><a href="../how-to/" aria-current="page">Установка</a><a href="https://github.com/uniqaiapp/deslop-ru" rel="noopener">GitHub</a></nav>
+<a class="btn btn-sm" href="https://uniqai.app/chat?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=deslop-ru&amp;utm_content=header" data-out="header">Чат UniqAI</a>
+</div></header>
+
+<main id="main">
+<section class="hero"><div class="wrap hero-in">
+<nav class="crumbs" aria-label="Хлебные крошки"><a href="../">Проверка</a> / <span>Установка</span></nav>
+<p class="pill"><span class="dot"></span>бесплатно · открытый код · MIT</p>
+<h1>Как поставить deslop-ru в Claude Code, Cursor и Codex</h1>
+<p class="lead">Три способа подключить скилл и четыре команды чекера. Зависимостей нет, нужен только Python.</p>
+<p class="byline">Обновлено 26.11.2026 · Автор: Vlad Yasinski (<a href="https://www.linkedin.com/in/vlad-yasinski-ua5er/" rel="noopener">LinkedIn</a>, <a href="https://www.roimobi.com/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=deslop-ru" rel="noopener">roimobi.com</a>) · Код на <a href="https://github.com/uniqaiapp/deslop-ru" rel="noopener">GitHub</a></p>
+<div class="hero-cta"><a class="btn" href="../#builder">Проверить текст</a></div>
+</div></section>
+<section class="ug-sec wrap" id="answer">
+<h2>Как установить deslop-ru?</h2>
+<p class="ug-answer">Скопируйте репозиторий в папку скиллов Claude Code, положите правило deslop-ru.mdc в проект Cursor или добавьте блок из codex/INSTRUCTIONS.md в AGENTS.md для Codex. Скрипту нужен только Python 3.9 и новее, ставить пакеты не надо. Потом скажите агенту убрать ИИ-штампы и укажите файл.</p>
+</section>
+<section class="ug-sec wrap" id="claude-code">
+<h2>Claude Code</h2>
+<p class="ug-small">Скилл ставится в папку скиллов. Для всех проектов:</p><pre class="np-pre" id="dr-i1">git clone https://github.com/uniqaiapp/deslop-ru ~/.claude/skills/deslop-ru</pre><div class="ug-actions"><button type="button" class="btn btn-sm" data-copy="dr-i1" data-kind="install" data-label="Скопировать">Скопировать</button></div><p class="ug-small">Только для одного проекта:</p><pre class="np-pre" id="dr-i2">git clone https://github.com/uniqaiapp/deslop-ru .claude/skills/deslop-ru</pre><div class="ug-actions"><button type="button" class="btn btn-sm" data-copy="dr-i2" data-kind="install" data-label="Скопировать">Скопировать</button></div><p class="ug-small">Или через каталог скиллов:</p><pre class="np-pre" id="dr-i3">npx skills add uniqaiapp/deslop-ru</pre><div class="ug-actions"><button type="button" class="btn btn-sm" data-copy="dr-i3" data-kind="install" data-label="Скопировать">Скопировать</button></div><p class="ug-small">Через плагин: сначала добавьте каталог, потом поставьте скилл.</p><pre class="np-pre" id="dr-i4">/plugin marketplace add uniqaiapp/skills
+/plugin install deslop-ru@uniqaiapp</pre><div class="ug-actions"><button type="button" class="btn btn-sm" data-copy="dr-i4" data-kind="install" data-label="Скопировать">Скопировать</button></div><p class="ug-small">Дальше напишите <code>/deslop-ru</code> или попросите: «убрать ИИ-штампы из этого файла».</p>
+</section>
+<section class="ug-sec wrap" id="cursor">
+<h2>Cursor</h2>
+<p class="ug-small">Скопируйте <a href="https://github.com/uniqaiapp/deslop-ru/blob/main/.cursor/rules/deslop-ru.mdc" rel="noopener">.cursor/rules/deslop-ru.mdc</a> в папку <code>.cursor/rules/</code> проекта вместе с <code>SKILL.md</code>, <code>scripts/</code> и <code>references/</code>. Правило подключает скилл через <code>@SKILL.md</code>.</p>
+</section>
+<section class="ug-sec wrap" id="codex">
+<h2>Codex и другие агенты с AGENTS.md</h2>
+<p class="ug-small">Скопируйте <code>SKILL.md</code>, <code>scripts/</code> и <code>references/</code> в <code>.agents/skills/deslop-ru/</code> и добавьте блок из <a href="https://github.com/uniqaiapp/deslop-ru/blob/main/codex/INSTRUCTIONS.md" rel="noopener">codex/INSTRUCTIONS.md</a> в свой <code>AGENTS.md</code>. Блок просит агента запускать проверку до и после правки и сообщать оценку:</p><pre class="np-pre" id="dr-i5">python3 .agents/skills/deslop-ru/scripts/deslop.py check &lt;файл&gt;</pre><div class="ug-actions"><button type="button" class="btn btn-sm" data-copy="dr-i5" data-kind="install" data-label="Скопировать">Скопировать</button></div>
+</section>
+<section class="ug-sec wrap" id="cli">
+<h2>Без агента: командная строка и CI</h2>
+<p class="ug-small">Скрипту нужен только Python 3.9 и новее. Четыре команды:</p><pre class="np-pre" id="dr-i6">python3 scripts/deslop.py check текст.md    # находки с номерами строк и оценка
+python3 scripts/deslop.py audit текст.md    # разбор по категориям и метрики формы
+python3 scripts/deslop.py strip текст.md    # безопасная вычистка, печатает результат
+python3 scripts/deslop.py stats             # сколько шаблонов в каждой категории</pre><div class="ug-actions"><button type="button" class="btn btn-sm" data-copy="dr-i6" data-kind="install" data-label="Скопировать">Скопировать</button></div><p class="ug-small">В CI поставьте порог по оценке: сборка упадёт, если текст набрал больше 20.</p><pre class="np-pre" id="dr-i7">python3 scripts/deslop.py check --fail-over 20 docs/*.md</pre><div class="ug-actions"><button type="button" class="btn btn-sm" data-copy="dr-i7" data-kind="install" data-label="Скопировать">Скопировать</button></div>
+</section>
+<section class="ug-sec wrap" id="try">
+<h2>Сначала проверьте в браузере</h2>
+<p class="ug-small">Не хотите ничего ставить? Та же проверка работает на главной странице без установки.</p><p class="np-ex-actions"><a class="btn btn-ghost" href="../#builder">Проверить текст онлайн</a></p>
+</section>
+<section class="author wrap" aria-label="Об авторе"><p>Автор: <strong>Vlad Yasinski</strong>, AI growth consultant (<a href="https://www.roimobi.com/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=deslop-ru" rel="noopener">roimobi.com</a>, <a href="https://www.linkedin.com/in/vlad-yasinski-ua5er/" rel="noopener">LinkedIn</a>, <a href="https://github.com/ua5er" rel="noopener">GitHub</a>). Опубликовано вместе с UniqAI под лицензией MIT. Текст остаётся в браузере и никуда не отправляется. Страница считает только анонимные просмотры, нажатия кнопок и уровень результата, но не сами слова.</p></section>
+</main>
+<nav class="browse wrap" aria-label="Разделы сайта"><h2>Разделы сайта</h2><p><a href="../">Проверка текста</a><a href="../examples/">Все примеры</a><a href="../patterns/">Каталог шаблонов</a><a href="../how-to/">Установка</a><a href="../examples/blog-intro/">Статья для блога</a><a href="../examples/chat-answer/">Ответ чат-бота</a><a href="../examples/newsletter/">Рассылка на английском</a><a href="../examples/product-card/">Карточка товара</a><a href="../examples/release-notes/">Заметки о релизе</a><a href="../examples/telegram-post/">Пост в Telegram</a></p></nav>
+<section class="more wrap" aria-labelledby="more-h">
+<h2 id="more-h">Другие бесплатные инструменты UniqAI</h2>
+<ul class="tools"><li><a href="https://uniqaiapp.github.io/no-plastic/" rel="noopener"><strong>Проверка промптов для портретов</strong><span>Ищет слова, из-за которых ИИ-портрет выглядит пластиковым, и подсказывает, чем их заменить.</span></a></li><li><a href="https://uniqaiapp.github.io/awesome-ai-video-prompts/" rel="noopener"><strong>Галерея промптов для видео</strong><span>Промпты для ИИ-видео с настройками моделей.</span></a></li><li><a href="https://uniqaiapp.github.io/video-director/" rel="noopener"><strong>Раскадровка для ИИ-видео</strong><span>Планы по тактам на входе, готовые промпты для Kling, Veo и других на выходе.</span></a></li><li><a href="https://uniqaiapp.github.io/ugc-ad-director/" rel="noopener"><strong>Проверка сценария UGC-рекламы</strong><span>Проверяет сценарий ролика и выдаёт промпты по планам.</span></a></li><li><a href="https://github.com/uniqaiapp/ai-video-pricing" rel="noopener"><strong>Цены на ИИ-видео</strong><span>Цена за секунду и за ролик у разных моделей, у каждой строки источник и дата.</span></a></li><li><a href="https://github.com/uniqaiapp/suno-producer" rel="noopener"><strong>Продюсер песен для Suno</strong><span>Структура, теги и строка стиля для песен в Suno.</span></a></li>
+<li><a href="https://github.com/hablamusic" rel="noopener"><strong>HablaMusic</strong><span>Родственный проект: бесплатные инструменты для ИИ-музыки и диджеев (промпты для Suno, BPM и тональность).</span></a></li>
+</ul></section>
+<footer class="foot"><div class="wrap foot-in">
+<p><strong>UniqAI</strong> делает приложение для ИИ-фото, видео и чата: <a href="https://uniqai.app/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=deslop-ru&amp;utm_content=footer" data-out="footer">uniqai.app</a>. Этот инструмент открыт под лицензией MIT, код на <a href="https://github.com/uniqaiapp/deslop-ru" rel="noopener">GitHub</a>.</p>
+<p>Текст остаётся в браузере и никуда не отправляется. Страница считает только анонимные просмотры, нажатия кнопок и уровень результата, но не сами слова. Названия моделей принадлежат их владельцам, deslop-ru с ними не связан.</p>
+<p>Автор: <a href="https://www.roimobi.com/?utm_source=github&amp;utm_medium=pages&amp;utm_campaign=deslop-ru" rel="noopener">Vlad Yasinski</a> · <a href="https://www.linkedin.com/in/vlad-yasinski-ua5er/" rel="noopener">LinkedIn</a> · <a href="https://t.me/ua5er" rel="noopener">Telegram</a></p>
+</div></footer>
+<script>window.UQ={key:"phc_AVmhcac2jVRwi9asHEuhzJXnAbQA2hzfUxzWvzjyLPc8",repo:"deslop-ru"};</script>
+<script src="../site.js" defer></script>
+</body></html>

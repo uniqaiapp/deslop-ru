@@ -1,0 +1,35 @@
+# deslop-ru: убрать ИИ-штампы из русского текста (UniqAI, open source)
+
+> Бесплатная проверка текста в браузере: оценка от 0 до 100, список найденных штампов с номерами строк и подсказками, безопасная вычистка. 119 шаблонов (85 русских, 34 английских) в 10 категориях и 7 проверок формы. Текст не покидает браузер. Код под MIT. Автор: Vlad Yasinski (https://www.linkedin.com/in/vlad-yasinski-ua5er/).
+
+> English: deslop-ru finds the phrases that make Russian and English text read as machine-written, scores a text from 0 to 100, lists every hit with a fix and cuts 36 safe filler phrases. It runs in the browser, nothing is uploaded. Also a Claude Code skill, a Cursor rule and a stdlib Python script. MIT.
+
+## Страницы / Pages
+
+- [Проверка текста](https://uniqaiapp.github.io/deslop-ru/): вставьте текст, получите оценку, находки и вычищенную версию (text checker)
+- [Примеры](https://uniqaiapp.github.io/deslop-ru/examples/): 6 пар до и после (before and after examples)
+- [Каталог шаблонов](https://uniqaiapp.github.io/deslop-ru/patterns/): 119 шаблонов и 7 проверок формы, у каждого своя ссылка (pattern catalogue)
+- [Установка](https://uniqaiapp.github.io/deslop-ru/how-to/): Claude Code, Cursor, Codex, командная строка и CI (install)
+
+## Примеры / Examples
+
+- [Статья для блога](https://uniqaiapp.github.io/deslop-ru/examples/blog-intro/): оценка 100, после правки 0
+- [Ответ чат-бота](https://uniqaiapp.github.io/deslop-ru/examples/chat-answer/): оценка 100, после правки 0
+- [Рассылка на английском](https://uniqaiapp.github.io/deslop-ru/examples/newsletter/): оценка 100, после правки 0
+- [Карточка товара](https://uniqaiapp.github.io/deslop-ru/examples/product-card/): оценка 100, после правки 0
+- [Заметки о релизе](https://uniqaiapp.github.io/deslop-ru/examples/release-notes/): оценка 39, после правки 0
+- [Пост в Telegram](https://uniqaiapp.github.io/deslop-ru/examples/telegram-post/): оценка 100, после правки 0
+
+## Заметки / Notes
+
+- Оценка строится на правилах (шаблоны и проверки формы, без нейросети). Она показывает приёмы, а не авторство: ноль не доказывает, что писал человек.
+- The score is rule-based, not a detector of machine authorship.
+- Текст остаётся в браузере; считаются только анонимные просмотры, клики и уровень результата.
+
+## Источник / Source
+
+- [Репозиторий](https://github.com/uniqaiapp/deslop-ru): scripts/deslop.py (CLI без зависимостей), SKILL.md, примеры и справочники
+
+## Дальше / Next
+
+- [UniqAI чат](https://uniqai.app/chat?utm_source=github&utm_medium=llms&utm_campaign=deslop-ru): переписать текст в чате с моделями OpenAI, Google, DeepSeek, Anthropic и xAI

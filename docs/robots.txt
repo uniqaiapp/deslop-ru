@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uniqaiapp.github.io/deslop-ru/sitemap.xml

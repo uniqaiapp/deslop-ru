@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-  <img alt="deslop-ru: Remove AI slop from Russian text" src="assets/banner.svg" width="1280" height="320">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.jpg">
+  <img alt="deslop-ru: a before and after of a coffee post. The text full of AI cliches scores 100 out of 100, the version with facts scores 0" src="assets/banner-dark.jpg" width="1280">
 </picture>
 
 <h1>deslop-ru: убрать ИИ-штампы из текста</h1>
@@ -19,6 +19,8 @@
 [Быстрый старт](#быстрый-старт) · [Как работает](#как-работает) · [Категории штампов](#категории-штампов) · [Примеры](#примеры) · [Установка](#установка) · [FAQ](#faq)
 
 </div>
+
+▶ **[Попробовать в браузере](https://uniqaiapp.github.io/deslop-ru/)**: вставьте текст, получите оценку, найденные фразы и безопасную вычистку. Текст не покидает страницу.
 
 [English](README.md) · Русский · [简体中文](README.zh-CN.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 

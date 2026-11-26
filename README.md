@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-  <img alt="deslop-ru: Remove AI slop from Russian text" src="assets/banner.svg" width="1280" height="320">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.jpg">
+  <img alt="deslop-ru: a before and after of a coffee post. The text full of AI cliches scores 100 out of 100, the version with facts scores 0" src="assets/banner-dark.jpg" width="1280">
 </picture>
 
 <h1>deslop-ru: remove AI slop from Russian text</h1>
@@ -20,6 +20,8 @@
 
 </div>
 
+▶ **[Try it in your browser](https://uniqaiapp.github.io/deslop-ru/)**: paste a text, get a score, every flagged phrase and a safe cleanup. Nothing leaves your page.
+
 English · [Русский](README.ru.md) · [简体中文](README.zh-CN.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
 deslop-ru removes AI slop from Russian text as a skill for Claude Code, Cursor and Codex, plus a dependency-free Python checker that flags 119 patterns (85 Russian, 34 English) in 10 categories and 7 structure checks, with line numbers and a score. It is for editors, SMM managers, Telegram channel authors, students and developers who write Russian docs and want a draft checked, or rewritten in their own voice, before it goes out.
@@ -27,6 +29,17 @@ deslop-ru removes AI slop from Russian text as a skill for Claude Code, Cursor a
 | **Checker with line numbers** | **Rewrite that keeps your voice** | **Safe cuts, no model needed** |
 |:---|:---|:---|
 | `scripts/deslop.py` prints every hit with category, phrase and a fix hint, then a 0–100 score. Exit code for CI. | The skill rewrites by category (канцелярит, calques, hype, empty intros and outros) and lists what it changed. Facts, numbers and register stay. | `strip` mode deletes only the 36 phrases whose removal never changes meaning and fixes capitalisation. |
+
+## Start here
+
+| I want to | Go to |
+|:---|:---|
+| Check a text right now | [Browser checker](https://uniqaiapp.github.io/deslop-ru/) |
+| See before and after texts | [Six examples](https://uniqaiapp.github.io/deslop-ru/examples/) |
+| Know which phrases give AI away | [Pattern catalogue](https://uniqaiapp.github.io/deslop-ru/patterns/) |
+| Use it inside Claude Code, Cursor or Codex | [Install guide](https://uniqaiapp.github.io/deslop-ru/how-to/) |
+
+Sister project: [HablaMusic](https://github.com/hablamusic) for AI music.
 
 ## Quickstart
 

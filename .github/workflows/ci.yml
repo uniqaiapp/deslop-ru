@@ -12,8 +12,9 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "${{ matrix.python }}" }
       - run: python3 tests/run.py
+      - run: python3 scripts/site.py --check
   size:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: test "$(du -sk --exclude=.git . | cut -f1)" -lt 3072   # repo under 3 MB
+      - run: test "$(du -sk --exclude=.git . | cut -f1)" -lt 4096   # repo under 4 MB (docs/ included)
