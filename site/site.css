@@ -337,6 +337,7 @@ details>summary,.ug-form select,.ug-form input,.ug-form textarea,.ug-actions .bt
 
 /* no-plastic: score, coverage, mode toggle, samples, stacked tables */
 .ug-form textarea#np-text{min-height:132px;max-height:60vh;font-size:15px;line-height:1.5}
+.ug-form textarea#dr-text{min-height:180px;max-height:60vh;font-size:15px;line-height:1.5}
 .np-meta{margin:6px 0 16px;font:12px GeistMono,monospace;color:var(--dim)}
 .np-mode,.np-samples{display:flex;flex-wrap:wrap;gap:6px}
 .np-mode button,.np-samples button{min-height:44px;padding:0 14px;border-radius:99px;border:1px solid var(--line2);background:transparent;color:var(--mut);font:500 14px Geist,sans-serif;cursor:pointer;text-align:left}

@@ -29,20 +29,20 @@
     if (!src) return;
     var text = src.tagName === "PRE" ? src.textContent : (src.querySelector("pre") || src).textContent;
     if (text === "(empty)") text = "";
-    var label = b.getAttribute("data-label") || "Copy prompt";
+    var label = b.getAttribute("data-label") || "Скопировать";
     var flash = function (msg, ok) {
       b.classList.toggle("done", ok); b.textContent = msg;
       setTimeout(function () { b.classList.remove("done"); b.textContent = label; }, ok ? 1600 : 3200);
     };
     var kind = b.getAttribute("data-kind") || "prompt";
     var ok = function () {
-      flash("Copied", true);
+      flash("Скопировано", true);
       track("tool_used", { action: "copy_" + kind, mode: b.getAttribute("data-mode") || "", example: b.getAttribute("data-example") || "custom" });
     };
     var fail = function () {
       // copying was blocked: select the text so the visitor can press Ctrl/Cmd+C, and say so
       try { var rg = document.createRange(); rg.selectNodeContents(src.tagName === "PRE" ? src : (src.querySelector("pre") || src)); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(rg); } catch (x) {}
-      flash("Press Ctrl+C to copy", false);
+      flash("Нажмите Ctrl+C, чтобы скопировать", false);
     };
     if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(ok, fail);
     else {
